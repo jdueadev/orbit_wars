@@ -64,7 +64,7 @@ Long-lived references at `docs/` root (not folder indexes):
 - [agent-native-phase3-status.md](agent-native-phase3-status.md) — shipped benchmark/gate/sweep CLI primitives
 - [nomenclature-rfc.md](nomenclature-rfc.md) — user-facing term mappings
 
-Repo root: [COLAB_LAUNCH_AND_INTEGRATION_PROMOTION.md](../COLAB_LAUNCH_AND_INTEGRATION_PROMOTION.md) — live Colab pilot tracker; [CONCEPTS.md](../CONCEPTS.md) — glossary.
+Repo root: [CONCEPTS.md](../CONCEPTS.md) — glossary. (The Colab pilot tracker was retired with the project; see [RETROSPECTIVE.md](../RETROSPECTIVE.md).)
 
 ## Maintenance
 
