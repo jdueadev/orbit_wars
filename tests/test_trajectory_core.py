@@ -2,6 +2,8 @@
 
 from __future__ import annotations
 
+import pytest
+
 from src.shield.trajectory_core import (
     SHIELD_PARITY_PAIRS,
     acceptable_planet_hit,
@@ -40,9 +42,11 @@ def test_line_circle_intersection_hits_sun_center() -> None:
 
 
 def test_bounds_exit_time_detects_right_edge() -> None:
-    hit = bounds_exit_time(0.5, 0.5, 25.0, 0.5)
+    # Board coordinates span [0, BOARD_SIZE] (100.0), so start just inside the right edge.
+    hit = bounds_exit_time(99.5, 50.0, 125.0, 50.0)
     assert hit is not None
-    assert 0.0 < hit <= 1.0
+    assert hit == pytest.approx(0.5 / 25.5)
+    assert bounds_exit_time(0.5, 0.5, 25.0, 0.5) is None
 
 
 def test_acceptable_planet_hit_modes() -> None:

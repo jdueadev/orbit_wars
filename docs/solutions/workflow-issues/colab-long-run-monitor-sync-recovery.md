@@ -283,7 +283,7 @@ Eval artifacts: `outputs/colab_runner/monitor/evals/<run_id>/jax_ckpt_<n>/`. Mon
 ## Related
 
 - Operator reference: [`docs/colab_runner.md`](../../colab_runner.md) — monitor section
-- Launch tracker: [`COLAB_LAUNCH_AND_INTEGRATION_PROMOTION.md`](../../../COLAB_LAUNCH_AND_INTEGRATION_PROMOTION.md) — pilot gates, sweep invalidation, June 16 long-run state
+- Launch tracker: `COLAB_LAUNCH_AND_INTEGRATION_PROMOTION.md` (removed at project retirement) — pilot gates, sweep invalidation, June 16 long-run state
 - Train host architecture: [`colab-train-host-preflight-long-run.md`](../architecture-patterns/colab-train-host-preflight-long-run.md)
 - CLI observability (no tail pipe): [`ow-long-cli-stderr-progress-no-tail-pipe.md`](../developer-experience/ow-long-cli-stderr-progress-no-tail-pipe.md) — prefer `ow train colab monitor` over piping `launch`
 - Sweep selection anti-patterns (generalized): [`planet-flow-sweep-gameable-objective.md`](../logic-errors/planet-flow-sweep-gameable-objective.md)

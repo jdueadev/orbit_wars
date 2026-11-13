@@ -7,6 +7,8 @@ from argparse import Namespace
 from pathlib import Path
 from unittest.mock import patch
 
+import pytest
+
 from src.cli import benchmark as benchmark_cli
 from src.cli.benchmark.common import REPO_ROOT
 from src.cli.benchmark.rollout_phase_profile import run_rollout_phase_profile_cli
@@ -91,8 +93,18 @@ def test_benchmark_main_rollout_phase_profile_dispatches(mock_profile) -> None:
                 "--updates",
                 "2",
                 "--json",
+                "--repo-root",
+                str(REPO_ROOT),
             ]
         )
         == 0
     )
     mock_profile.assert_called_once()
+
+
+def test_rollout_phase_profile_cli_missing_integration_root_exits_cleanly(
+    tmp_path: Path,
+) -> None:
+    args = Namespace(repo_root=tmp_path / "missing-integration")
+    with pytest.raises(SystemExit, match="requires the integration worktree"):
+        run_rollout_phase_profile_cli(args)

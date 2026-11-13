@@ -272,7 +272,7 @@ def test_checkpoint_payload_builder_includes_curriculum_state() -> None:
     from src.config import TrainConfig
     from src.jax.policy import build_jax_policy
     from src.jax.train import init_train_state
-    from src.training.curriculum import CurriculumController
+    from src.opponents.curriculum import CurriculumController
 
     cfg = TrainConfig()
     cfg.task.candidate_count = 4

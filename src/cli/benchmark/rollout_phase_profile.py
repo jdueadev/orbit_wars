@@ -6,7 +6,6 @@ import argparse
 import json
 import os
 import subprocess
-import sys
 from pathlib import Path
 
 from src.cli.benchmark.common import REPO_ROOT
@@ -21,8 +20,7 @@ def _integration_root(args: argparse.Namespace) -> Path:
         raise SystemExit(
             "rollout-phase-profile requires the integration worktree "
             f"(missing timed collect at {root}). "
-            "Run from orbit_wars-integration or pass --repo-root.",
-            file=sys.stderr,
+            "Run from orbit_wars-integration or pass --repo-root."
         )
     return root
 

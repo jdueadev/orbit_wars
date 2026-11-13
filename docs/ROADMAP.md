@@ -27,7 +27,7 @@
 | Item | Link |
 | ---- | ---- |
 | Launch hygiene learner ablation + tier-2 assessment | Tier-2 failed (~4× sec/update); hot path exhausted; B (hygiene) wins learn-proof vs A (79162a); artifact [ablation.json](benchmarks/launch-hygiene-ablation.json) | [plan](solutions/tooling-decisions/launch-hygiene-learner-ablation-gate.md) · [runbook](operator-runbook.md) |
-| Preflight learn-proof refresh (post-hygiene) | VERIFIED through `beat_random` vs `preflight-calibration.json` | [report](../outputs/preflight/factorized_post_hygiene_learn_proof.json) · [runbook](operator-runbook.md) |
+| Preflight learn-proof refresh (post-hygiene) | VERIFIED through `beat_random` vs `preflight-calibration.json` | report: `outputs/preflight/factorized_post_hygiene_learn_proof.json` (generated locally, not committed) · [runbook](operator-runbook.md) |
 | Cursor session-start hook: `docs/CURSOR.md` + project `.cursor/hooks.json` example | [plan](CURSOR.md) · [Phase 3 §4](agent-native-phase3-status.md) |
 | Observability debug bundle: `mean_ships_per_launch`, PPO `_2p`/`_4p` + update-time fractions gated behind `metric_groups.debug` | [plan](solutions/developer-experience/benchmark-subprocess-training-observability.md) |
 | Split decoder replay batch contracts (#167) | [plan](architecture/jax-policy-encoder.md) · Closes #167 |
